@@ -1,0 +1,32 @@
+json file
+make ajax request
+once response is received store dat value in local storage 
+read the data from local storage which will be an array of objects
+loop through the array,iterate through it and display details in table format
+
+add user form to add details 
+name
+location
+email
+phone
+
+using javascript validate fields
+warn username
+append the error message just below field
+update the table once error is fixed
+
+jquery
+view details 
+edit
+delete
+
+login form with user name and password use array
+login match with local storage
+if no match error
+if match see home page
+Home page - 3 links
+Profile - form with prefilled data of user(name,email,username,password,location,contactno),update form
+messages - load different page which will list all messages available for that user,option to send message(hardcore in local storage)-title,sender information,view ,delete,important
+
+
+group message using node js socket(textbox with send button to send data)
