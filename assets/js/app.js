@@ -88,8 +88,9 @@ app.controller('RegisterCtrl', ['$scope','$location','$http', function ($scope,$
         $http.post("/register",$scope.user).success(function(response) {
             if(response === "success"){
                 $location.path("/login");
-            }else{
-                $scope.message = "Please try again."
+            }else if(response === "taken"){
+            } else {
+                $scope.message = "Please try again.";
             }
             $scope.user = "";
         })

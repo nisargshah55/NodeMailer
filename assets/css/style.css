@@ -33,8 +33,8 @@ h3 {
 
 img { max-width: 100%; }
 
-::-moz-selection { background: #4aaf51; color: #fff; text-shadow: none; }
-::selection { background: #4aaf51; color: #fff; text-shadow: none; }
+/* ::-moz-selection { background: #4aaf51; color: #fff; text-shadow: none; }
+::selection { background: #4aaf51; color: #fff; text-shadow: none; } */
 
 
 .btn-link-1 {

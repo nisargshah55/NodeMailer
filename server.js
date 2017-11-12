@@ -50,17 +50,22 @@ app.post("/register",function(req,res) {
         }
         else {
 		console.log(req.body.username);
-		db.collection("register").insert(req.body, function(err,records) {
-		if(records){
-			res.send("success");
-		}else{
-			res.send("error");
-		}
-		db.close();
-	})
-	}	
+        if((req.body.username || req.body.email) != null)  {
+                if(records) {
+                    console.log(records);
+                    res.send("taken");
+                } else {
+                    db.collection("register").insert(req.body, function(err,records) {
+                        res.send("success");
+                })
+            }
+        })	
+	} else {
+        res.send("error");
+    }
+}
 })
-})
+});
 
 app.post("/login", function(req,res) {
 	mongoClient.connect(conn, function(err, db){
