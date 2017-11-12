@@ -50,11 +50,11 @@ app.post("/register",function(req,res) {
         }
         else {
 		console.log(req.body.username);
-        if((req.body.username || req.body.email) != null)  {
-            db.collection("register").findOne({ $or: [{ 'username': req.body.username}, {'email': req.body.email}]}, function(err,records) {
+        if(req.body !== null) {
+            db.collection("register").findOne({ 'username': req.body.username}, function(err,records) {
                 if(records) {
                     console.log(records);
-                    res.send("taken");
+                    res.send("error");
                 } else {
                     db.collection("register").insert(req.body, function(err,records) {
                         res.send("success");
@@ -62,7 +62,7 @@ app.post("/register",function(req,res) {
             }
         })	
 	} else {
-        res.send("error");
+        
     }
 }
 })

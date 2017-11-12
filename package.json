@@ -1,0 +1,21 @@
+{
+  "name": "NodeMailer",
+  "version": "",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "express-session": "*",
+    "connect-mongodb-session": "*",
+    "nodemailer": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nisargshah55/NodeMailer"
+  },
+  "author": "Nisarg Shah"
+}
