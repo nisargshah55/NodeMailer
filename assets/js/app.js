@@ -89,6 +89,7 @@ app.controller('RegisterCtrl', ['$scope','$location','$http', function ($scope,$
             if(response === "success"){
                 $location.path("/login");
             }else if(response === "taken"){
+                $scope.taken = "Username or Email already taken.";
             } else {
                 $scope.message = "Please try again.";
             }

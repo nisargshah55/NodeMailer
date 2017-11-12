@@ -51,6 +51,7 @@ app.post("/register",function(req,res) {
         else {
 		console.log(req.body.username);
         if((req.body.username || req.body.email) != null)  {
+            db.collection("register").findOne({ $or: [{ 'username': req.body.username}, {'email': req.body.email}]}, function(err,records) {
                 if(records) {
                     console.log(records);
                     res.send("taken");
